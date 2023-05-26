@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+      font-family:"Roboto", sans-serf;
+      font-size:30px;
+    }
+    td{
+        font-family:"Roboto", sans-serf;
+        font-size:30px;
+    }
+    body{
+    background-image: url("css/home.jpeg");
+    background-size:1350px 768px;
+    background-attachment:fixed;
+    }
+    .b{
+    font-size:20px;
+    font-family: "Roboto", sans-serf;
+    color:#80d4ff;
+    width:140px;
+    height:50px;
+    background-color:black;
+    border-radius:5px;
+    position: relative;
+    left:500px;
+    top:100px;
+    }
+  </style>
+</head>
+
+<body>
+    <table>
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>GENDER</th>
+        <th>CONDITION</th>
+      </tr>
+    </thead>
+    <tbody>
+        {{#each patientData}}
+      <tr id="patientData">
+        <td>{{this.name}}</td>
+        <td>{{this.age}}</td>
+        <td>{{this.gender}}</td>
+        <td>{{this.symptoms}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+    <a href="/edit"><button class="b">Add Patient</button></a>
+   
+</body>
+
+</html>

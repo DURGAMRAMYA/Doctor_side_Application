@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Patient Details</title>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("css/chat.jpeg");
+      background-size:1350px 768px;
+      background-attachment: fixed; 
+    }
+    
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+      left:120px;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    select, input[type="text"], input[type="email"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .h{
+        color:brown;
+        font-family:"Roboto", sans-serf; 
+        text-align: center;
+    }
+    .e{
+        color:crimson;
+        font-family:"Roboto", sans-serf; 
+        text-align: center;
+    }
+    .sub{
+        position: relative;
+        left:55%;
+        top:10%;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="h"><b>PATIENT DETAILS</b></h1>
+  
+  <form id="patientForm" action="/edit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="nonbinary">Nonbinary</option>
+    </select>
+    
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+    
+    <label for="city">City:</label>
+    <select id="city" name="city" required>
+      <option value="City 1">City 1</option>
+      <option value="City 2">City 2</option>
+      <option value="City 3">City 3</option>
+    </select>
+    
+    <label for="state">State:</label>
+    <select id="state" name="state" required>
+      <option value="State 1">State 1</option>
+      <option value="State 2">State 2</option>
+      <option value="State 3">State 3</option>
+    </select>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+    
+    <h2 class="e">Professional Details</h2>
+    
+    <label for="symptoms">Symptoms:</label>
+    <select id="symptoms" name="symptoms" required>
+      <option value="depression">Depression</option>
+      <option value="anxiety">Anxiety</option>
+      <option value="substance_abuse">Substance Abuse Disorder</option>
+    </select>
+    
+    <label for="currentlyOnMedication">Currently On Any Medication:</label>
+    <select id="currentlyOnMedication" name="currentlyOnMedication" required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    
+    <label for="hasDiabetesOrLiverProblems">Has Diabetes / Liver Problems:</label>
+    <select id="hasDiabetesOrLiverProblems" name="hasDiabetesOrLiverProblems" required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    
+    <label for="heartHeartProblems">Has Heart Problems:</label>
+    <select id="heartHeartProblems" name="hasHeartProblems" required>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+    
+    <label for="medicinePrescribed">Medicine Prescribed:</label>
+    <input type="text" id="medicinePrescribed" name="medicinePrescribed" required>
+    
+    <input type="submit" value="Submit" class="sub">
+  </form>
+</body>
+
+
+</html>
